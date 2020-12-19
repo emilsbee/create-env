@@ -6,3 +6,8 @@ to have REACT_APP_ in front of the the key names. Hence, you can leave
 the constant as an empty string or add some preface.  
 
 The object that is converted to the .env file must have key names in camelCase.
+
+To run the script just run  
+```
+yarn convert
+```

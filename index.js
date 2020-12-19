@@ -1,9 +1,14 @@
 const fs = require('fs');
 var _ = require('lodash');
+const chalk = require('chalk');
 
-const keyPreface = "REACT_APP_"
-const obj = {}
 
+const keyPreface = "REACT_APP_" // Preface or leave as an empty string ""
+const obj = {} // Object to convert. Keys MUST be camelCase
+
+if (Object.keys(obj).length === 0) {
+    console.log(chalk.red("Error: empty obj"))
+}
 
 // Recieves a string in camel case and converts it to a env type key in the form SOME_STRING_SEPARATED_BY_SPACES
 // also it adds a REACT_APP_ preface to the key
